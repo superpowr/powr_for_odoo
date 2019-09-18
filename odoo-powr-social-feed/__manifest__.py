@@ -24,7 +24,7 @@
         'views/template.xml',
         'views/website.xml',
     ],
-    'images': ['images/social_feed.png'],
+    'images': ['images/main_screenshot.png'],
     'installable': True,
     'auto_install': False,
 }

@@ -15,6 +15,7 @@
     'version': '1.0',
     'description': """POWr Plugins Popup.""",
     'author': 'POWr.io',
+    'license': 'AGPL-3',
     'support': 'support@powr.io',
     'category': 'website',
     'website': "https://www.powr.io",
@@ -23,6 +24,7 @@
         'views/template.xml',
         'views/website.xml',
     ],
+    'images': ['images/main_screenshot.png'],
     'installable': True,
     'auto_install': False,
 }
