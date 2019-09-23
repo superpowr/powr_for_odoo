@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="assets_editor_multi_slider"
+              inherit_id="website.assets_editor">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/odoo-powr-multi-slider/static/src/js/snippets_menu.js"/>
+        </xpath>
+    </template>
+
+    <template id="snippets_powr_plugins_multi_slider" inherit_id="odoo-powr-plugins.snippets_powr_plugins">
+        <xpath expr="//div[@id='powr_snippet_content']//div[hasclass('o_panel_body')]" position="inside">
+            <t t-snippet="odoo-powr-multi-slider.multi_slider"
+               t-thumbnail="/odoo-powr-multi-slider/static/src/img/multiSlider.svg"/>
+        </xpath>
+    </template>
+
+    <template id="multi_slider" name="Multi Slider">
+        <section class="multi_slider" style="padding:10px;padding-top:20px;position:relative;">
+            <span class="edit_powr_snippet" style="display:none;">Click Here to Edit Block</span>
+            <style>
+                .multi_slider_menu,.multi_slider_menu:hover{
+                width: 100%;
+                margin-left: 10px;
+                color: white;
+                text-decoration: none;
+                float:left;
+                }
+                .o_editable .edit_powr_snippet{
+                display:block !important;
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                cursor:pointer;
+                z-index: -1;
+                background: white;
+                color: gainsboro;
+                }
+            </style>
+            <div class="container">
+            </div>
+        </section>
+    </template>
+
+
+    <template id="snippets_powr_plugins_multi_slider_menu_options" inherit_id="website.snippet_options"
+              name="Options">
+        <xpath expr="//div" position="after">
+            <div data-js="snippets_powr_plugins_multi_slider_menu_options" data-selector=".multi_slider"
+                 data-snippet-option-id="snippets_powr_plugins_multi_slider_menu_options">
+                <li>
+                    <a href="https://www.powr.io/plugins/multi-slider/standalone?unique_label=UNIQUE_ID" target="_blank"
+                       class="multi_slider_menu edit_multislider">Edit Multi Slider
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.powr.io" class="multi_slider_menu" target="_blank">POWr Home</a>
+                </li>
+                <li>
+                    <a href="https://www.powr.io/knowledge-base" class="multi_slider_menu" target="_blank">POWr Help</a>
+                </li>
+            </div>
+        </xpath>
+    </template>
+</odoo>

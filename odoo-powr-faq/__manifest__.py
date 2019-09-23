@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 #################################################################################
 # Author      : POWr (<www.powr.io>)
-# Copyright(c): 2012-Present POWr Inc.
+# Copyright(c): 2019-Present POWr Inc.
 # All Rights Reserved.
 #
 # This program is copyright property of the author mentioned above.
@@ -10,18 +10,19 @@
 #################################################################################
 
 {
-    'name': 'POWr Plugins',
-    'summary': 'Creates a POWr Plugins section inside the Odoo Website Editor to easily add POWr Plugins to your site!',
+    'name': 'FAQ',
+    'summary': 'Answer questions in advance with custom FAQs',
     'version': '1.0',
-    'description': """POWr Plugins.""",
+    'description': """POWr Plugins FAQ.""",
     'author': 'POWr.io',
     'license': 'AGPL-3',
+    'support': 'support@powr.io',
     'category': 'website',
     'website': "https://www.powr.io",
-    'depends': ['base', 'website'],
+    'depends': ['base', 'website', 'odoo-powr-plugins'],
     'data': [
-        'views/website.xml',
         'views/template.xml',
+        'views/website.xml',
     ],
     'images': ['images/main_screenshot.png'],
     'installable': True,
